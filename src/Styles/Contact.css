@@ -1,0 +1,122 @@
+
+#contact-header, #contact-content {
+    text-align: left;
+    margin-left: 7.5%;
+}
+
+#contact-content {
+    display: flex;
+    flex-direction: row;
+}
+
+#social-icons{
+    width: 30%;
+    margin-left: 1.5em;
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+}
+
+#in, #gh {
+    margin-top: 40px;
+}
+
+.contact-icon-container{
+    
+    box-shadow: 0;
+    transition: box-shadow 0.5s;
+    padding: 0 5px;
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: white;
+}
+
+.contact-icon-container:hover, .contact-icon-container:active, .contact-icon-container:focus {
+    transition: box-shadow 0.5s;
+    box-shadow: 3px 3px 7px 3px black;
+}
+
+.contact-method {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.contact-icon {
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-top: 5px;
+    width: min-content;
+    transition: color 0.5s;
+
+}
+
+#cv-icon{
+    color: #551a8b;
+}
+
+#gh-icon {
+    color: black;
+}
+
+#in-icon {
+    color: #0077b5;   
+}
+
+@media only screen and (max-width: 770px){
+
+        #contact-content{
+            display: grid;
+            margin: 0 7.5% 3em 7.5%;
+            grid-row-gap: 20px;
+        }
+
+        #social-icons {
+            width: 70%;
+            display: inline-grid;
+            grid-template-columns: 2fr 1fr;
+            place-items: center;
+            grid-template-areas:
+            'text1 icon1'
+            'text2 icon2'
+            'text3 icon3';
+            grid-row-gap: 10px;
+        }
+
+        #gh {
+            margin-top: 0;
+            grid-area: text2;
+        }
+
+        #gh-icon{
+            grid-area: icon2;
+        }
+
+        #in {
+            margin-top: 0;
+            grid-area: text3;
+        }
+
+        #in-icon{
+            grid-area: icon3;
+        }
+
+        #cv {
+            margin-top: 0;
+            grid-area: text1;
+        }
+
+        #cv-icon {
+            grid-area: icon1;
+        }
+
+
+}
+
+@media only screen and (max-width: 510px){
+
+        #contact-content {
+            margin: 0 0 3em 2px;
+        }
+
+}
+

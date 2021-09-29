@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+
+#icons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.email-icon {
+    color: rgb(1, 45, 108);
+    font-size: 2.5em;
+}
+
+#email-form-container{
+    background-color: rgb(226, 232, 241);
+    border-radius: 7px;
+    border: 2px solid black;
+    width: 50%;
+    padding: 1em 2em;
+    
+}
+
+#form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 7fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-gap: 10px;
+    place-items: left;
+}
+
+#req-legend{
+    font-size: 13px;
+}
+
+.form-label{
+    grid-column: 1/2;
+    font-family: 'Mukta', sans-serif;
+    font-weight: bold;
+}
+
+.form-input{
+   grid-column: 2/3;
+}
+
+#message-field{
+    resize: none;
+    overflow: auto;
+    grid-column: 2/4;
+}
+
+#recaptcha-widget {
+    grid-column: 2/4;
+}
+
+#submit-button {
+    border: 2px solid black;
+    border-radius: 5px;
+    height: 2em;
+    background-color: #00abff;
+    color: rgb(6, 6, 75);
+    font-weight: bold;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    transition: color 0.5s, background-color 0.5s;
+    grid-column: 2/3;
+}
+
+#submit-button:hover, #submit-button:active, #submit-button:focus {
+    background-color: rgb(1, 45, 108);
+    color: rgb(231, 231, 96);
+    transition: color 0.5s, background-color 0.5s;
+    cursor: pointer;
+}
+
+#result-container, #error-container {
+    text-align: center;
+}
+
+@media only screen and (max-width: 920px){
+
+    #recaptcha-widget {
+        grid-column: 1/3;
+    }
+
+}
+
+@media only screen and (max-width: 770px){
+
+    #email-form-container{
+        padding: 1em;
+        width: 87%;
+        max-width: 100vw;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    #recaptcha-widget {
+        transform: scale(0.9);
+        margin-left: -1em;
+    }
+}
+

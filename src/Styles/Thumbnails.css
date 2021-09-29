@@ -1,0 +1,233 @@
+
+:-moz-focusring {
+    outline: 3px solid blue;
+    border-radius: 5px;
+  }
+
+#my-work {
+    text-align: left;
+    margin-left: 7.5%;
+
+}
+
+hr {
+    width: 85%;
+}
+
+#arrows-and-projects-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#projects-container{
+    display: flex;
+    flex-direction: row;
+    padding: 1em 0;
+    width: 46em;
+    height: 20em;
+    margin: 0 3vw;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    -ms-overflow-style: none;  /* hide default scrollbar for IE and Edge */
+    scrollbar-width: none;    /*hide it for Firefox*/
+    scroll-behavior: smooth; 
+}
+
+/*hide default scrollbar for Chrome, Safari & Opera*/
+#projects-container::-webkit-scrollbar{
+    display: none;
+}
+
+#prev-button, #next-button {
+    background-color: transparent;
+    border: none;
+    margin: 0 auto;
+}
+
+.arrow {
+    font-size: 3.5em;
+    color: rgb(6, 6, 75);
+    background-color: white;
+    border-radius: 50%;
+    transition: color 0.3s;
+}
+
+.arrow-disabled {
+    font-size: 3.5em;
+    color: gray;
+    background-color: white;
+    border-radius: 50%;
+    transition: color 0.3s;
+}
+
+.arrow:hover, .arrow:focus {
+    color: green;
+    cursor: pointer;
+}
+
+.project {
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    height: 16em;
+    width: 18em;
+    border: solid 2px black;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    transition: box-shadow 0.3s ease;
+    /*margin-left: 2vw;*/
+}
+
+.project:hover, .project:focus {
+    cursor: pointer;
+    -webkit-box-shadow: 3px 5px 15px 3px #000000; 
+    box-shadow: 3px 5px 15px 3px #000000;
+}
+
+
+.thumbnail-img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* captionActive styles (also used for mobile devices):*/
+.active-caption {
+    text-align:center;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 0 0 2px 2px; 
+    background-color: rgba(140, 140, 140, 0.9);
+    width: inherit;
+    height: 30%;
+    margin-top: 60%;
+    padding-top: 0.5em;
+    color: black;  
+    transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+    -webkit-transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+    -moz-transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+    -ms-transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+}
+
+/*captionInactive styles:*/
+
+.inactive-caption {
+text-align: center;
+font-weight: bold;
+font-size: 17px;
+border-radius: 0 0 2px 2px;
+background-color: rgba(140, 140, 140, 0.9);
+width: inherit;
+height: 0;
+margin-top: 89%;
+padding-top: 0;
+color: transparent; 
+transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+-webkit-transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+-moz-transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+-ms-transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
+}
+
+#caption-links-container{
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption-link {
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0.5em;
+    border-radius: 7px;
+    color: white;
+    background-color: black;
+    border: 2px solid black;
+    transition: color 0.5s, background-color 0.5s;
+
+}
+
+.inactive-caption-link {
+    margin: 0 0.5em;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0.5em;
+    border-radius: 7px;
+    color: transparent;
+    background-color: transparent;
+    border: 2px solid transparent;
+}
+
+.caption-link:hover, .caption-link:focus {
+    color: black;
+    background-color: white;
+}
+
+@media only screen and (max-width: 998px){
+    
+    #projects-container {
+        width: 21em;
+    }
+    #prev-arrow, #next-arrow {
+        margin: 0;
+    }
+
+    .project {
+        transform: scale(0.9);
+        scroll-snap-align: center;
+    }
+
+}
+
+@media only screen and (max-width: 640px){
+    
+    .project {
+        transform: scale(0.85);
+        margin-left: 10vw;
+        margin-right: 14vw;
+    }
+    
+    #next-button, #prev-button, .arrow, .arrow-disabled {
+        
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    #arrows-and-projects-container{
+        display: block;
+        
+    }
+
+    #projects-container {
+        -ms-overflow-style: auto;  /* show default scrollbar for IE and Edge */
+        scrollbar-width: auto;    /*show it for Firefox*/
+        width: 80vw;
+        margin: 0 auto;
+    }
+    /*show default scrollbar for Chrome, Safari & Opera*/
+    #projects-container::-webkit-scrollbar{
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 440px){
+
+    #projects-container {
+        margin: 0 5vw;
+        width: 90vw;
+    }
+
+    .project {
+        transform: scale(0.8);
+        margin-left: 1em;
+    }
+
+
+}
