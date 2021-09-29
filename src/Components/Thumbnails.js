@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from 'react';
 import ScrollableAnchor from 'react-scrollable-anchor';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleLeft, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { Icon } from '@iconify/react'; 
 import { isMobile } from 'react-device-detect';
 
 export default function Thumbnails(){
@@ -191,6 +192,9 @@ return(
     <h2 id='my-work'>My Work</h2>
     </ScrollableAnchor>
     <hr/>
+    <div id='swipe-icon-container'>
+    <Icon icon="mdi:gesture-swipe-horizontal" id='swipe-icon' title='swipe or scroll to see more' aria-hidden='true' />
+    </div>
     <div id='arrows-and-projects-container'>
         <button id='prev-button' aria-label='previous arrow' onClick={handlePrevArrowClick} disabled={prevButtonActive ? false : true}><FontAwesomeIcon className={prevButtonActive ? 'arrow' : 'arrow-disabled'} id='prev-arrow' icon={ faArrowCircleLeft } /></button> 
     <div id='projects-container' ref={sliderRef} aria-label='scroll area for my projects'>

@@ -20,6 +20,15 @@ hr {
     align-items: center;
 }
 
+#swipe-icon-container {
+    display: none;
+}
+
+
+#swipe-icon {
+    display: none;
+}
+
 #projects-container{
     display: flex;
     flex-direction: row;
@@ -78,7 +87,6 @@ hr {
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
     transition: box-shadow 0.3s ease;
-    /*margin-left: 2vw;*/
 }
 
 .project:hover, .project:focus {
@@ -185,6 +193,18 @@ transition: height 0.5s, margin-top 0.5s, padding-top 0.5s, color 0.5s;
 }
 
 @media only screen and (max-width: 640px){
+
+
+    #swipe-icon-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    #swipe-icon {
+        display: inline;
+        height: 3em;
+        width: auto;
+    }
     
     .project {
         transform: scale(0.85);
