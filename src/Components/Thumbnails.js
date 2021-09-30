@@ -193,7 +193,7 @@ return(
     </ScrollableAnchor>
     <hr/>
     <div id='swipe-icon-container'>
-    <Icon icon="mdi:gesture-swipe-horizontal" id='swipe-icon' title='swipe or scroll to see more' aria-hidden='true' />
+    <Icon icon='mdi:gesture-swipe-horizontal' id='swipe-icon' title='swipe or scroll to see more' aria-hidden='true' />
     </div>
     <div id='arrows-and-projects-container'>
         <button id='prev-button' aria-label='previous arrow' onClick={handlePrevArrowClick} disabled={prevButtonActive ? false : true}><FontAwesomeIcon className={prevButtonActive ? 'arrow' : 'arrow-disabled'} id='prev-arrow' icon={ faArrowCircleLeft } /></button> 
@@ -202,9 +202,9 @@ return(
 
     <figure className='project' aria-label={project.caption + ' project.'} tabIndex='0' ref={(proj)=>figureRef.current[index] = proj} key={index} onMouseEnter={()=>handleMouseEnter(index)} onMouseLeave={()=>handleMouseLeave(index)} onFocus={()=>handleMouseEnter(index)} onBlur={()=>handleMouseLeave(index)} style={{backgroundColor: 'white', backgroundImage: 'url(' + project.imgSrc + ')', backgroundSize: 'contain', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}} > 
         <figcaption className={isMobile ? 'active-caption' : 'inactive-caption'} ref={(capt)=>captionRef.current[index] = capt} key={index}>{project.caption}
-            <div id="caption-links-container">
-                <a className={ isMobile ? 'caption-link' : 'inactive-caption-link'} onMouseEnter={(e)=>handleLinkHover(e)} onMouseLeave={(e)=>handleLinkExit(e)} onFocus={(e)=>handleLinkHover(e)} onBlur={(e)=>handleLinkExit(e)} id="live-link" href={project.siteUrl} target='_blank' rel='noopener noreferrer'>Open live</a>
-                <a className={ isMobile ? 'caption-link' : 'inactive-caption-link'} onMouseEnter={(e)=>handleLinkHover(e)} onMouseLeave={(e)=>handleLinkExit(e)} id="code-link" href={project.ghUrl} target='_blank' rel='noopener noreferrer'>View on Github</a>
+            <div id='caption-links-container'>
+                <a className={ isMobile ? 'caption-link' : 'inactive-caption-link'} onMouseEnter={(e)=>handleLinkHover(e)} onMouseLeave={(e)=>handleLinkExit(e)} onFocus={(e)=>handleLinkHover(e)} onBlur={(e)=>handleLinkExit(e)} id='live-link' href={project.siteUrl} target='_blank' rel='noopener noreferrer'>Open live</a>
+                <a className={ isMobile ? 'caption-link' : 'inactive-caption-link'} onMouseEnter={(e)=>handleLinkHover(e)} onMouseLeave={(e)=>handleLinkExit(e)} id='code-link' href={project.ghUrl} target='_blank' rel='noopener noreferrer'>View on Github</a>
             </div>
         </figcaption>
     </figure>)}   

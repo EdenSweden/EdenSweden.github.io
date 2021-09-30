@@ -13,7 +13,7 @@ export default function Header () {
                 <h1 id='name'>Eden Cope</h1>
                 <FontAwesomeIcon icon={faGlobeAfrica} id='name-header-icon'/>
             </div>
-            <div id="occupation-and-nav">
+            <div id='occupation-and-nav'>
             <div id='occupation-container'>
             <h2 id='occupation'>Front-End Web Developer</h2>
             <FontAwesomeIcon icon={faLaptopCode} className='occupation-icons'/>
