@@ -17,8 +17,8 @@ export default function Contact(){
             <div id='contact-content'>
             <EmailForm />
             <div id='social-icons'>
-                    <label htmlFor='social-link-1' className='contact-method' id='cv'>View my CV:</label>
-                    <a aria-describedby='cv' aria-labelledby='cv' aria-label='Link to view my CV.' id='social-link-1' className='contact-icon' href='/Cope_public_CV.pdf' target='_blank' rel='noopener noreferrer'>
+                    <label htmlFor='social-link-1' className='contact-method' id='cv'>View my resume:</label>
+                    <a aria-describedby='cv' aria-labelledby='cv' aria-label='Link to view my resume.' id='social-link-1' className='contact-icon' href='/Cope_public_resume_2022.pdf' target='_blank' rel='noopener noreferrer'>
                         <div className='contact-icon-container'>
                             <FontAwesomeIcon icon={faFileAlt} id='cv-icon'/>
                         </div>
